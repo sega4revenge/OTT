@@ -1,0 +1,11 @@
+target 'iosApp' do
+  use_frameworks!
+  platform :ios, '13.0'
+  pod 'module', :path => '../multiplatform/module'
+end
+
+target 'macosApp' do
+  use_frameworks!
+  platform :osx, '11.0'
+  pod 'module', :path => '../multiplatform/module'
+end

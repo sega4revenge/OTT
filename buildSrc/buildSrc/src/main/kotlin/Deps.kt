@@ -76,8 +76,7 @@ object Deps {
         }
 
         object Essenty {
-            private const val VERSION = "0.6.0"
-            const val lifecycle = "com.arkivanov.essenty:lifecycle:$VERSION"
+            const val lifecycle = "com.arkivanov.essenty:lifecycle:0.7.0"
         }
     }
 

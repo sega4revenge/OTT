@@ -18,9 +18,7 @@ import com.sega.module.screen.splash.SplashScene
 import com.sega.module.screen.splash.integration.SplashComponent
 import com.sega.module.screen.welcome.WelcomeScene
 import com.sega.module.screen.welcome.integration.WelcomeComponent
-import io.github.aakira.napier.LogLevel
-import io.github.aakira.napier.Napier
-import io.ktor.util.logging.*
+
 
 class RootComponent internal constructor(
     componentContext: ComponentContext,

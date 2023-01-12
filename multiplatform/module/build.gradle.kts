@@ -1,3 +1,9 @@
+android {
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+}
 plugins {
     id("multiplatform-setup")
     id("android-setup")
@@ -6,19 +12,6 @@ plugins {
 }
 
 kotlin {
-    targets
-            .filterIsInstance<org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget>()
-            .filter { it.konanTarget.family == org.jetbrains.kotlin.konan.target.Family.IOS }
-            .forEach { target ->
-                target.binaries {
-                    framework {
-                        baseName = "multiplatform"
-                        export(Deps.ArkIvanov.Decompose.decompose)
-                        export(Deps.ArkIvanov.MVIKotlin.mvikotlinMain)
-                        export(Deps.ArkIvanov.Essenty.lifecycle)
-                    }
-                }
-            }
 
     sourceSets {
         named("commonMain") {
@@ -69,6 +62,15 @@ kotlin {
 
     sourceSets {
         named("iosMain") {
+            dependencies {
+                api(Deps.ArkIvanov.Decompose.decompose)
+                api(Deps.ArkIvanov.MVIKotlin.mvikotlinMain)
+                api(Deps.ArkIvanov.Essenty.lifecycle)
+                implementation(Deps.JetBrains.Kotlin.ktorClientCIO)
+            }
+        }
+
+        named("macosMain") {
             dependencies {
                 api(Deps.ArkIvanov.Decompose.decompose)
                 api(Deps.ArkIvanov.MVIKotlin.mvikotlinMain)

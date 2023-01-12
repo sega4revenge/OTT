@@ -19,15 +19,15 @@ fun AppTheme(
 ) {
     val colors = if (darkTheme) {
         darkColors(
-            primary = Color(0xFFBB86FC),
-            primaryVariant = Color(0xFF3700B3),
+            primary = ColorConstant.primary,
+            primaryVariant = ColorConstant.primaryVariant,
             secondary = Color(0xFF03DAC5),
             background = ColorConstant.background
         )
     } else {
         lightColors(
-            primary = Color(0xFF6200EE),
-            primaryVariant = Color(0xFF3700B3),
+            primary = ColorConstant.primary,
+            primaryVariant = ColorConstant.primaryVariant,
             secondary = Color(0xFF03DAC5),
             background = ColorConstant.background
         )
