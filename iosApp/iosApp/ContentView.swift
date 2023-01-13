@@ -1,4 +1,5 @@
 import SwiftUI
+import NexleModule
 
 struct ContentView: View {
 	var body: some View {

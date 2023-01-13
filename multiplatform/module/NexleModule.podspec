@@ -1,19 +1,19 @@
 Pod::Spec.new do |spec|
-    spec.name                     = 'module'
+    spec.name                     = 'NexleModule'
     spec.version                  = '1.0'
     spec.homepage                 = 'Link to the Shared Module homepage'
     spec.source                   = { :http=> ''}
     spec.authors                  = ''
     spec.license                  = ''
     spec.summary                  = 'Some description for the Shared Module'
-    spec.vendored_frameworks      = 'build/cocoapods/framework/module.framework'
+    spec.vendored_frameworks      = 'build/cocoapods/framework/NexleModule.framework'
     spec.libraries                = 'c++'
                 
                 
                 
     spec.pod_target_xcconfig = {
         'KOTLIN_PROJECT_PATH' => ':multiplatform:module',
-        'PRODUCT_MODULE_NAME' => 'module',
+        'PRODUCT_MODULE_NAME' => 'NexleModule',
     }
                 
     spec.script_phases = [

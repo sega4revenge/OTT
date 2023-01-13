@@ -20,7 +20,7 @@ kotlin {
         homepage = "Link to the Shared Module homepage"
         version = "1.0"
         framework {
-            baseName = "module"
+            baseName = "NexleModule"
             export(Deps.ArkIvanov.Decompose.decompose)
             export(Deps.ArkIvanov.MVIKotlin.mvikotlinMain)
             export(Deps.ArkIvanov.Essenty.lifecycle)
