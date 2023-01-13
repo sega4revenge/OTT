@@ -9,8 +9,7 @@ Pod::Spec.new do |spec|
     spec.vendored_frameworks      = 'build/cocoapods/framework/module.framework'
     spec.libraries                = 'c++'
                 
-    spec.ios.deployment_target = '13.0'
-    spec.osx.deployment_target = '11.0'
+                
                 
     spec.pod_target_xcconfig = {
         'KOTLIN_PROJECT_PATH' => ':multiplatform:module',
