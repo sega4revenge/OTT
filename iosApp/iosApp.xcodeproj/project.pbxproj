@@ -28,6 +28,10 @@
 		8A2400B6297074B00014154F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
 		8A2400BA297074B00014154F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		8A2400BB297074B00014154F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557BA273AAA24004C7B11 /* Assets.xcassets */; };
+		8A4BF47E2971432F0042AEFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4BF47D2971432F0042AEFE /* AppDelegate.swift */; };
+		8A4BF47F2971432F0042AEFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4BF47D2971432F0042AEFE /* AppDelegate.swift */; };
+		9777EFE68555C216196C02DE /* Pods_macosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B70AFFBCE297B59A6FE867C /* Pods_macosApp.framework */; };
+		E9A852F25ABA867CA964391E /* Pods_iosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F78E1E2F2A81CDB5B13F788 /* Pods_iosApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -227,6 +231,15 @@
 			path = iosApp;
 			sourceTree = "<group>";
 		};
+		9B4E9C453702918096C9B92C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F78E1E2F2A81CDB5B13F788 /* Pods_iosApp.framework */,
+				8B70AFFBCE297B59A6FE867C /* Pods_macosApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -375,6 +388,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A4BF47E2971432F0042AEFE /* AppDelegate.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				6F580E9B29713DF300AF56A0 /* ComponentHolder.swift in Sources */,
 				6F580E91297111FA00AF56A0 /* ObservableValue.swift in Sources */,

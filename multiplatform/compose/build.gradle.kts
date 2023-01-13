@@ -2,6 +2,9 @@ plugins {
     id("multiplatform-compose-setup")
     id("android-setup")
 }
+dependencies {
+    implementation("androidx.compose.ui:ui:1.3.3")
+}
 
 kotlin {
     sourceSets {

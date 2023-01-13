@@ -37,13 +37,14 @@ object Deps {
         object Compose {
             private val VERSION get() = properties["compose.version"]
             val gradlePlugin get() = "org.jetbrains.compose:compose-gradle-plugin:$VERSION"
+            val constraint get() = "androidx.constraintlayout:constraintlayout-compose:1.0.1"
         }
     }
 
     object Android {
         object Tools {
             object Build {
-                const val gradlePlugin = "com.android.tools.build:gradle:7.3.1"
+                const val gradlePlugin = "com.android.tools.build:gradle:7.4.0"
             }
         }
     }

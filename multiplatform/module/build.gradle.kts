@@ -30,7 +30,6 @@ kotlin {
                 implementation(Deps.JetBrains.Kotlin.ktorClientLogging)
                 implementation(Deps.JetBrains.Kotlin.ktorSerialization)
                 implementation(Deps.JetBrains.Kotlin.kotlinxDateTime)
-
                 implementation(Deps.Utils.log)
             }
         }
@@ -40,6 +39,7 @@ kotlin {
         named("jsMain") {
             dependencies {
                 implementation(Deps.JetBrains.Kotlin.ktorClientJS)
+                api(Deps.Utils.log)
             }
         }
     }
@@ -56,6 +56,7 @@ kotlin {
         named("androidMain") {
             dependencies {
                 implementation(Deps.JetBrains.Kotlin.ktorClientCIO)
+                api(Deps.Utils.log)
             }
         }
     }
@@ -67,6 +68,7 @@ kotlin {
                 api(Deps.ArkIvanov.MVIKotlin.mvikotlinMain)
                 api(Deps.ArkIvanov.Essenty.lifecycle)
                 implementation(Deps.JetBrains.Kotlin.ktorClientCIO)
+                api(Deps.Utils.log)
             }
         }
 
@@ -76,6 +78,7 @@ kotlin {
                 api(Deps.ArkIvanov.MVIKotlin.mvikotlinMain)
                 api(Deps.ArkIvanov.Essenty.lifecycle)
                 implementation(Deps.JetBrains.Kotlin.ktorClientCIO)
+                api(Deps.Utils.log)
             }
         }
     }

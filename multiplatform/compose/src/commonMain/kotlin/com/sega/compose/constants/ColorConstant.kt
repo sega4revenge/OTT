@@ -7,4 +7,6 @@ object ColorConstant {
     val SegmentControl = Color(0xFF4084DF)
     val primary = Color(red = 255, green = 87, blue = 0)
     val primaryVariant = Color(red = 229, green = 33, blue = 21)
+
+    val gradientButton = listOf(primary, primaryVariant)
 }

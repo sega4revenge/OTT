@@ -3,24 +3,21 @@ package com.sega.compose.screen.welcome
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.Button
-import androidx.compose.material.ButtonDefaults
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
-import androidx.compose.material.TextButton
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.sega.compose.constants.ColorConstant
 import com.sega.compose.constants.ImageConstant
 import com.sega.compose.image.ImageResource
 import com.sega.module.screen.welcome.WelcomeScene
-
 
 @Composable
 fun WelcomeContent(component: WelcomeScene) {
@@ -66,15 +63,19 @@ fun WelcomeContent(component: WelcomeScene) {
             )
 
             Box(Modifier.weight(1.0f))
+            val density = LocalDensity.current.density
+            Row(horizontalArrangement = Arrangement.Start, modifier = Modifier.fillMaxWidth()) {
+                Column(verticalArrangement = Arrangement.spacedBy(16.dp),
+                    modifier = Modifier.padding(start = 20.dp, bottom = 40.dp).width(IntrinsicSize.Min)) {
 
-            GradientButton("Try For 1 Month Free", Brush.horizontalGradient(listOf(Color(0xFF28D8A3), Color(0xFF00BEB2))), modifier = Modifier
-                    .padding(horizontal = 23.dp, vertical = 17.dp),
-                onClick = component::subscribe)
+                    Text(text = "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit")
+
+                    GradientButton("Try For 1 Month Free", Brush.horizontalGradient(ColorConstant.gradientButton),
+                        onClick = component::subscribe)
+                }
+            }
         }
     }
-
-
-
 }
 
 @Composable
@@ -86,14 +87,15 @@ fun GradientButton(
 ) {
     Button(
         modifier = modifier,
-        colors = ButtonDefaults.buttonColors(backgroundColor = Color.Transparent),
+        colors = ButtonDefaults.buttonColors(contentColor = Color.White),
         contentPadding = PaddingValues(),
         onClick = { onClick() },
     ) {
         Box(
             modifier = Modifier
                     .background(gradient)
-                    .then(modifier),
+                    .padding(16.dp)
+                    .width(IntrinsicSize.Max),
         ) {
             Text(text = text)
         }
