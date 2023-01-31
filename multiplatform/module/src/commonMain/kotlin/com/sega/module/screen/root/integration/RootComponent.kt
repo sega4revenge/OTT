@@ -67,7 +67,10 @@ class RootComponent internal constructor(
 
     private fun onSplashOutput(output: SplashScene.Output): Unit =
         when (output) {
-            is SplashScene.Output.finishPreparing -> navigation.push(Configuration.Welcome)
+            is SplashScene.Output.finishPreparing -> {
+                LogManager.log("Tap Finish")
+                navigation.push(Configuration.Welcome)
+            }
         }
 
     private fun onWelcomeOutput(output: WelcomeScene.Output): Unit =

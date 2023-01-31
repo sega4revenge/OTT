@@ -3,9 +3,9 @@ import NexleModule
 
 struct RootView: View {
     
-    private var childStack: Value<ChildStack<AnyObject, RootScenceChild>>
+    private var childStack: Value<ChildStack<AnyObject, TodoRootChild>>
     
-    init(_ component: RootScence) {
+    init(_ component: TodoRoot) {
         self.childStack = component.childStack
     }
     
@@ -13,9 +13,9 @@ struct RootView: View {
         let child = childStack.value.active.instance
         
         switch child {
-        case let splash as RootScenceChild.Splash:
+        case let splash as TodoRootChild.Main:
             SplashView(splash.component)
-        case let welcome as RootScenceChild.Welcome:
+        case let welcome as TodoRootChild.Welcome:
             WelcomeView(welcome.component)
         default:
             EmptyView()

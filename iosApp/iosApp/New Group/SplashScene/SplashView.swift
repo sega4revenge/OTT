@@ -3,19 +3,17 @@ import NexleModule
 
 struct SplashView: View {
     
-    private let component: SplashScene
+    private let component: TodoMain
     
-    init(_ component: SplashScene) {
+    init(_ component: TodoMain) {
         self.component = component
     }
     
     var body: some View {
         VStack {
             Image(ImageAssets.Splash.logo)
-        }
-        .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-                self.component.onFinishPreparing()
+            Button("HELLO", action: {
+                self.component.onItemClicked(id: 4546)
             })
         }
     }

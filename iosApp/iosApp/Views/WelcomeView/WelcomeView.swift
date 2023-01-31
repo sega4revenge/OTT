@@ -3,7 +3,7 @@ import NexleModule
 
 struct WelcomeView: View {
     
-    private var component: WelcomeScene
+    private let component: WelcomeScene
     
     init(_ component: WelcomeScene) {
         self.component = component
